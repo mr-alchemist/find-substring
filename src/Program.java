@@ -10,7 +10,7 @@ public class Program {
 	}
 	
 	void run() {
-		//int x = substrBM("BABBARA BAR BARBOR BARBARATOR","BARBA");
+		//int x = searchBM("BABBARA BAR BARBOR BARBARATOR","BARBA");
 		int x = searchBM("ротоколокол пища колокол","колокол");
 		System.out.println(x);
 		
@@ -35,8 +35,8 @@ public class Program {
 				if(j-- == 0)
 					return i;
 			
-			//i += Math.max(j - prefix[text.charAt(i + j)], suffix[j + 1]);
-			i += Math.max(j - prefix[text.charAt(i + j)], 1 );
+			i += Math.max(j - prefix[text.charAt(i + j)], suffix[j + 1]);
+			//i += Math.max(j - prefix[text.charAt(i + j)], 1 );
 			
 		}
 			
